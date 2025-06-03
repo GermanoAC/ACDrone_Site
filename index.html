@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ACDrone - Imagens Aéreas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    
+
+</head>
+
+<script>
+function enviarWhatsApp(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const telefone = document.getElementById("telefone").value;
+    const servico = document.getElementById("servico").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    const texto = `Olá, me chamo ${nome}%0A` +
+                  `E-mail: ${email}%0A` +
+                  `Telefone: ${telefone}%0A` +
+                  `Tipo de Serviço: ${servico}%0A` +
+                  `Mensagem: ${mensagem}`;
+
+    const url = `https://wa.me/5588998053389?text=${texto}`;
+    window.open(url, '_blank');
+}
+</script>
+
+
+
+<body>
+    <header>
+        <div class="logo">
+    <img src="images/logo.png" alt="ACDrone - Imagens Aéreas">
+</div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#galeria">Fotos</a>
+            <a href="#video">Vídeo</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Imagens Aéreas Profissionais</h1>
+        <p>O mundo visto de cima!</p>
+    </section>
+
+    <section class="container" id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>A ACDrone é especializada em capturas aéreas com drones para eventos, obras, imóveis, inspeções e muito mais. Oferecemos qualidade, agilidade e imagens impressionantes.</p>
+    </section>
+
+    <section class="container" id="servicos">
+        <h2>Serviços</h2>
+        <ul class="servicos-lista">
+            <li><i class="fas fa-city"></i> Imagens de imóveis</li>
+            <li><i class="fas fa-warehouse"></i> Monitoramento de obras</li>
+            <li><i class="fas fa-tree"></i> Cobertura de eventos</li>
+            <li><i class="fas fa-map-marked-alt"></i> Mapeamento aéreo</li>
+        </ul>
+    </section>
+
+    <section class="container" id="galeria">
+        <h2>Galeria de Fotos</h2>
+        <div class="galeria">
+            <img src="images/foto1.jpg" alt="Imagem aérea 1">
+            <img src="images/foto2.jpg" alt="Imagem aérea 2">
+            <img src="images/foto3.jpg" alt="Imagem aérea 3">
+            <img src="images/foto4.jpg" alt="Imagem aérea 4">
+            <img src="images/foto5.jpg" alt="Imagem aérea 5">
+            <img src="images/foto6.jpg" alt="Imagem aérea 6">
+            <img src="images/foto7.jpg" alt="Imagem aérea 7">
+            <img src="images/foto8.jpg" alt="Imagem aérea 8">
+        </div>
+    </section>
+
+    
+<section class="container" id="video">
+    <h2>Vídeo demonstrativo</h2>
+    <div class="video-local">
+        <video autoplay muted playsinline controls>
+            <source src="videos/drone.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+    </div>
+</section>
+
+<section class="container" id="orcamento">
+    <h2>Solicite um Orçamento</h2>
+    <form class="form-orcamento" onsubmit="enviarWhatsApp(event)">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone">
+
+        <label for="servico">Tipo de Serviço:</label>
+        <select id="servico" name="servico">
+            <option value="imoveis">Imagens de Imóveis</option>
+            <option value="obras">Monitoramento de Obras</option>
+            <option value="eventos">Cobertura de Eventos</option>
+            <option value="mapeamento">Mapeamento Aéreo</option>
+        </select>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<a href="https://wa.me/5588998053389?text=Olá!%20Gostaria%20de%20um%20orçamento%20com%20a%20ACDrone." 
+   class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+            <section class="container" id="contato">
+        <h2>Contato</h2>
+        <p><i class="fas fa-envelope"></i> germanotstb@gmail.com</p>
+        <p><i class="fas fa-phone-alt"></i> WhatsApp (88) 99805-3389</p>
+        <p><i class="fas fa-instagram"></i> Instagram: <a href="https://instagram.com/acdrone.ia" target="_blank">@acdrone.ia</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ACDrone. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
